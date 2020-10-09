@@ -1,0 +1,137 @@
+@import "../themes/themeLight.scss";
+
+main{
+    @include tamaño-seccion(column, 100%, 80px);
+    background-color: $COLOR_PRINCIPAL;
+    color: #000;
+}
+.servicios{
+    @include tamaño-seccion(column, 100%, 800px);
+    text-align: center;
+    padding-top: 30px;
+    border-right: 2px solid $COLOR_SECUNDARIO;
+    border-left: 2px solid $COLOR_SECUNDARIO;
+    border-bottom: none;
+    h1{
+        font-size: 2rem;
+        color: $COLOR_SECUNDARIO;
+    }
+    img{
+        align-self: center;
+        width: 100px;
+        margin: 20px;
+    }
+    a{
+        color: $COLOR_PRINCIPAL;
+        text-decoration: none;
+    }
+}
+.servicios__lista{
+    @include tamaño-seccion(row, 100%, 800px);
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: 1.4rem;
+}
+.servicios__tipo{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 5px;
+}
+.informacion{
+    @include tamaño-seccion(column, 100%, 500px);
+    border-right: 2px solid $COLOR_SECUNDARIO;
+}
+.informacion__planes{
+    @include tamaño-seccion(column, 100%, 500px);
+    background-color: $COLOR_SECUNDARIO;
+    text-align: center;
+    padding: 30px;
+    color: #FFF;
+    font-size: 1.5rem;
+    h1{
+        
+        margin: 5px 0;
+        font-size: 2rem;
+    }
+    a{
+        text-decoration: none;
+        color: $COLOR_SECUNDARIO;
+    }
+}
+.informacion__titulo{
+        color: $COLOR_SECUNDARIO;
+        background-color: $COLOR_PRINCIPAL;
+    }
+.informacion__imagen{
+    @include tamaño-seccion(column, 50%, 500px);
+    justify-content: center;
+    
+}
+.informacion__mascotas{
+    width: 98%;
+    max-height: 400px;
+}
+.covidinf{
+    font-size: 1.1rem;
+    text-align: center;
+    border-top: 5px dotted #000;
+    border-bottom: 5px dotted #000;
+}
+.boton_conocer{
+    @extend .boton-base;
+    color: $COLOR_SECUNDARIO;
+    background-color: $COLOR_PRINCIPAL;
+    font-size: 1.2rem;
+    margin: 30px auto;
+}
+.boton_servicios{
+    @extend .boton-base;
+    background-color: $COLOR_SECUNDARIO;
+    width: 100%;
+}
+
+@media (max-width: 991px){
+    .informacion__imagen{
+        display: none;
+    }
+}
+@media (min-width: 992px){
+    .servicios{
+        height: 350px;
+    }
+    .servicios__lista{
+        justify-content: center;
+        text-align: center;
+    }
+    .servicios__tipo{
+        display: flex;
+        flex-direction: column;
+        width: 180px;
+        padding: 10px;
+    }
+
+    .informacion{
+        flex-direction: row;
+    }
+    .informacion__planes{
+        width: 50%;
+        text-align: justify;
+        padding: 70px 10px 20px 15%;
+        p{
+            width: 80%;
+            
+        }
+    }
+    .informacion__titulo{
+        font-weight: normal;
+        max-width: 500px;
+        padding-left: 5px;
+    }
+    .covidinf{
+        font-size: 1.2rem;
+    }
+    .boton_conocer{
+        margin: 30px 0;
+    }
+}

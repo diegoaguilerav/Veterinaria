@@ -1,0 +1,6 @@
+@mixin  tamaño-seccion($direccion, $ancho, $altura){
+    display: flex;
+    flex-direction: $direccion;
+    width: $ancho;
+    height: $altura;
+}

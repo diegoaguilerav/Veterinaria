@@ -1,0 +1,53 @@
+@import "../themes/themeLight.scss";
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    font-size: 1.2rem;
+    text-align: center;
+    p, i, h1{
+        padding: 5px 10px;
+        color: #FFF;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+}
+.footer__main{
+    background-color: #FF8700;
+    border: 15px double #000;
+}
+.footer__imagen{
+    width: 100%;
+    background-color: #FFF;
+    border-right: 3px solid $COLOR_SECUNDARIO;
+    border-left: 3px solid $COLOR_SECUNDARIO;
+}
+.footer__redes{
+    img{
+        width: 75px;
+        margin: 10px 30px;
+    }
+}
+/*Media query footer*/
+@media (min-width: 992px){
+    footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 800px;
+    }
+    .footer__main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 20px;
+    }
+    .footer__informacion, .footer__accesos, .footer__redes{
+        width: 33.3%;
+        max-height: 200px;
+    }
+}
+/*Fin Media query footer*/
